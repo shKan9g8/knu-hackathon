@@ -1,0 +1,32 @@
+.Logo{
+    width: auto;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+@keyframes testKeyword {
+    0% {
+      transform: scale(1);
+    }
+    40%{
+        transform: scale(0.2);
+    }
+
+    100% {
+      transform: scale(0.2) translateX(-500%) translateY(-370%);
+    }
+  }
+
+  @keyframes testKeyword2 {
+    0% {
+      opacity: 0;
+      transform: scale(0.1) translateX(50px) translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1) translateX(0px) translateY(0px);
+    }
+  }
