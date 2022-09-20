@@ -28,9 +28,9 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start:1;
-    grid-row-end:3;
+    grid-row-end:5;
 }
-
+/*검은색 라인 중간에 넣기*/
 /*버튼 중앙으로 정렬*/
 .middle-button {
   text-align: center;

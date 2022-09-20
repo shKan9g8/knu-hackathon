@@ -22,10 +22,9 @@ export default function Hospital() {
                     <div className='map-container'>
                         Map
                     </div>
-                    <div>
-                        Text
-                        {Menu.content && <Content>{Menu.selectComponent[Menu.content]}</Content>}
-                    </div>
+                    {/* <div>
+                        {Menu.content && <Content a = {state}>{Menu.selectComponent[Menu.content]}</Content>}
+                    </div> */}
 
                 </div>
         </motion.div>
