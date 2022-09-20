@@ -12,18 +12,25 @@ export default function SimpleMap() {
         zoom: 11
     };
 
+
+    const MyMarker = () => {
+
+        return (
+            <div>
+                <img className='MapIcon' style={{ height: '30px', height: '30px' }} src='img/Map-icon.png'/>
+            </div>
+        );
+    };
+
     return (
         <div style={{ height: '100vh', width: '100%' }}>
             <GoogleMapReact
-                bootstrapURLKeys={{ key: "여기 키 넣으세요" }}
+                bootstrapURLKeys={{ key: "//" }}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
             >
-                <AnyReactComponent
-                    lat={10.99835602}
-                    lng={77.01502627}
-                    text="My Marker"
-                />
+                
+                <MyMarker key={1} lat={11} lng={77} tooltip='hello' />
 
             </GoogleMapReact>
         </div>
