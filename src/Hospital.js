@@ -2,6 +2,7 @@ import React,{useRef, useState} from 'react';
 import "./Hospital.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion } from "framer-motion";
+import Map from "./component/Map.js";
 
 export default function Hospital() {
 
@@ -15,7 +16,7 @@ export default function Hospital() {
                         Menu
                     </div>
                     <div className='map-container'>
-                        Map
+                        <Map/>
                     </div>
                     <div>
                         Text
