@@ -1,0 +1,26 @@
+
+.container{
+    width: 1500px;
+    min-height: 1000px;
+    margin: auto;
+    place-content: center;
+    display:grid;
+    grid-template-columns: 735px 735px;
+    grid-template-rows: 580px 400px;
+    align-content: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: black;
+}
+.container > div{
+    background-color: white;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 40px;
+    margin: 10px;;
+}
+.index-container{   
+    grid-column-start:1;
+    grid-column-end:3;
+}

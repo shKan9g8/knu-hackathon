@@ -1,0 +1,21 @@
+.infoContainer{
+    width:100px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: 7px 7px;
+    align-content: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    background-color: red;
+}
+
+.open img {  
+    transform: rotate(180deg); 
+  }
+  
+  .content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
