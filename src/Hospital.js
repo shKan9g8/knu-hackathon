@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion } from "framer-motion";
 import Map from "./component/Map.js";
 
+
 export default function Hospital() {
 
     return ( 
