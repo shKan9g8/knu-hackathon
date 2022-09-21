@@ -3,6 +3,8 @@ import "./Hospital.css";
 import { motion } from "framer-motion";
 import Menu from "./component/Menu.js"
 import styled from 'styled-components';
+import Map from "./component/Map.js";
+
 export default function Hospital() {
   const Content = styled.div`
   ${(props) => props.theme.main};
@@ -20,7 +22,7 @@ export default function Hospital() {
                       <Menu />
                     </div>
                     <div className='map-container'>
-                        Map
+                        <Map />
                     </div>
                     {/* <div>
                         {Menu.content && <Content a = {state}>{Menu.selectComponent[Menu.content]}</Content>}

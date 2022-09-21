@@ -35,7 +35,10 @@ const Menu = () => {
           );
         })}
       </Container>
-      {content && <Content>{selectComponent[content]}</Content>}
+      {content && <Content>
+        {selectComponent[content]} 
+      </Content>}
+      
     </div>
   );
 };
