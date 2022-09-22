@@ -1,25 +1,36 @@
-import React,{useRef, useState} from 'react';
+import React, {useState} from 'react';
 import "./Hospital.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { motion } from "framer-motion";
+import Menu from "./component/Menu.js"
+import styled from 'styled-components';
 import Map from "./component/Map.js";
-
+import Title from "./component/Title.js";
 export default function Hospital() {
+  const Content = styled.div`
+  ${(props) => props.theme.main};
+  width: 100%;
+  height: 100%;
+`;
+    const [test,setTest] = useState();
+    const dataname = (x) => {
+        console.log(x);
+        console.log(typeof x);
+        setTest(x);
+        console.log(test);
+    };
 
     return ( 
         <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
                 <div className='container'>
                     <div>
-                        Logo & title
+                        <Title test = {test}/>
                     </div>
-                    <div className='selector-container'>
-                        Menu
+                    <div className = 'selector-container'>
+                      MENU
+                      <Menu dataname = {dataname}/>
                     </div>
                     <div className='map-container'>
-                        <Map/>
-                    </div>
-                    <div>
-                        Text
+                        <Map />
                     </div>
 
                 </div>

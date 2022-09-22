@@ -27,8 +27,7 @@ export default function SimpleMap() {
             <GoogleMapReact
                 bootstrapURLKeys={{ key: "//" }}
                 defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-            >
+                defaultZoom={defaultProps.zoom}>
                 
                 <MyMarker key={1} lat={11} lng={77} tooltip='hello' />
 
