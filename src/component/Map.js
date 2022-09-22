@@ -1,9 +1,9 @@
 import React, { useState, Wrapper } from "react";
 import GoogleMapReact from 'google-map-react';
 import database from '../db/data.json'
+import mapper from './mapper.css'
 
-
-const MyMarker = ({ onClick }) => {
+const MyMarker = ({ onClick , $hover}) => {
 
 
     const [icon, setIcon] = useState('img/Map-icon.png');
@@ -13,8 +13,8 @@ const MyMarker = ({ onClick }) => {
         setIconWidth("30px");
     }
     return (
-        <img className='MapIcon'
-            style={{ height: iconWidth, height: iconWidth, position: 'absolute', transform: 'translate(-50%,-50%)' }}
+        <img className={$hover ? "icon_hover_on":"icon_hover_off" }
+            style={{ /*height: iconWidth, height: iconWidth,*/ position: 'absolute', transform: 'translate(-50%,-50%)' }}
             onClick={changeIcon}
             src={icon}
         />
@@ -39,7 +39,7 @@ export default function SimpleMap() {
     return (
         <div style={{ height: '100vh', width: '100%' }}>
             <GoogleMapReact
-                bootstrapURLKeys={{ key: "hehehehe" }}
+                bootstrapURLKeys={{ key: "AIzaSyBAVsovkZnbVO6AMjhd4EytSZXqiFpdMGA" }}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
                 center={{ lat: 35.79835602, lng: 128.5502627 }}
