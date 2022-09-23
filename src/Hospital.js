@@ -5,6 +5,7 @@ import Menu from "./component/Menu.js"
 import styled from 'styled-components';
 import Map from "./component/Map.js";
 import Title from "./component/Title.js";
+import { Link } from 'react-router-dom';
 export default function Hospital() {
   const Content = styled.div`
   ${(props) => props.theme.main};
@@ -27,6 +28,8 @@ export default function Hospital() {
                     </div>
                     <div className = 'selector-container'>
                       <Menu dataname = {dataname}/>
+                      <Link to={'/'+test}>바로가기 </Link><br/>
+                      <Link to={'/test'}>더보기</Link>
                     </div>
                     <div className='map-container'>
                         <Map test = {test}/>

@@ -7,19 +7,18 @@ import data from './db/data.json'
 
 export default function Hpdetail() {
     const {id}=useParams();
-    var imgurl = `img/${id}.png`
     return ( 
         <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
                 <div className='container'>
                     <div>
-                        {id>=1&id<=15?<img src={imgurl} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
+                        {id>=1&id<=15?<img src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
                     </div>
                     <div>
                         Text
                         { data.hospitals.map((hospital,index)=>{
                             if (hospital.id==id){
                                 return(
-                                    <li style={{ whiteSpace: 'pre-wrap'}}>
+                                    <li key={index} style={{ whiteSpace: 'pre-wrap'}}>
                                     {hospital.content}
                                     {/*hospital.detail.map((cont)=>cont)*/}
                                     </li>

@@ -7,7 +7,7 @@ export default function Information({hp_id}) {
         <div className='flex-container'>
           {
             data.hospitals.map((hospital,index)=>{
-              return <div className='flex-item'>{hospital.id}</div>
+              return <div key={index} className='flex-item'>{hospital.id}</div>
             })
             }
         </div>
