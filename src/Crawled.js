@@ -19,7 +19,7 @@ export default function Crawled() {
     }
 
     return ( 
-                <div className='container'>
+                <div className='container1'>
                     <div >
                         {crawled_id!=0?<img className='img-item' src={`./img/${crawled_id}.png`} alt='Cannot_Found' ></img>:<></>}
                     </div>
