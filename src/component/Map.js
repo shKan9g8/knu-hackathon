@@ -18,7 +18,7 @@ const MyMarker = ({ onClick, $hover, place }) => {
                     onClick={changeIcon}
                     src={icon}
                 />
-                {< InfoWindow className="Wrapper"
+                {< InfoWindow className="Wrapper" 
                     style={{ position: 'absolute', transform: 'translate(-50%,-90%)' }}
                     place={place} />}
 
@@ -43,9 +43,9 @@ const MyMarker = ({ onClick, $hover, place }) => {
 
 
 // InfoWindow component
-const InfoWindow = (props) => { // infoWindow ����
+const InfoWindow = (props) => { 
     const { place } = props;
-    const infoWindowStyle = { //info�� CSS�κ�
+    const infoWindowStyle = { 
         position : "relative",
         bottom: 170,
         left: "-110px",
@@ -70,15 +70,20 @@ const InfoWindow = (props) => { // infoWindow ����
 
 export default function SimpleMap({test}) {
 
- /*   const [N,setN] = useState([10,10]);
+    const [N,setN] = useState([35.798,128.55]);
 
     useEffect(() => {
-        setN([database.hospitals[test].lat, database.hospitals[test].lng]);
+        if (test)
+            setN([database.hospitals[test-1].lat, database.hospitals[test-1].lng]);
+        else {
+            test = 1;
+            setN([35.798, 128.55])
+        }
 
-    }, [[database.hospitals[test].lat, database.hospitals[test].lng]])
+    },[test])
 
 
-    console.log(database.hospitals[test].lat)*/
+//    console.log(database.hospitals[test].lat)
 
 
     const defaultProps = {
@@ -95,17 +100,19 @@ export default function SimpleMap({test}) {
     }
 
     return (
-            <div style={{ height: '128vh', width: '100%' }}>
+            <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "" }}
                     defaultCenter={defaultProps.center}
                     defaultZoom={defaultProps.zoom}
+                    center={N} 
+                    zoom={13}
                     fullscreenControl={false}
                     options={defaultMapOptions}
                 >
                     {database.hospitals.map((data, key) => {
                         return (
-                            <MyMarker key={key} lat={data.lat} lng={data.lng} place={data} tooltip='hello' /> // data�� json���� �޾ƿ� ��, lat�� lng�� ���� �浵 ��Ŀ ���� �߰�
+                            <MyMarker key={key} lat={data.lat} lng={data.lng} place={data} tooltip='hello' /> 
                         );
                     })}
                 </GoogleMapReact>
