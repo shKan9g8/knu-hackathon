@@ -1,10 +1,16 @@
 
-.container{
+@font-face {
+    font-family: "BlackhanSans";
+    font-weight: 50;
+    src: url("./fonts/Maplestory Light.ttf") format("truetype");
+}
+
+.container {
     width: 1500px;
     min-height: 1000px;
     margin: auto;
     place-content: center;
-    display:grid;
+    display: grid;
     grid-template-columns: 735px 735px;
     grid-template-rows: 580px 400px;
     align-content: center;
@@ -12,13 +18,16 @@
     column-gap: 10px;
     row-gap: 10px;
     background-color: black;
+    font-family : "BlackhanSans"
 }
 .container > div{
     background-color: white;
     text-align: center;
     padding: 10px 10px;
     font-size: 40px;
-    margin: 10px;;
+    margin: 10px;
+    background-color: white;
+    font-family : "BlackhanSans"
 }
 .index-container{   
     grid-column-start:1;

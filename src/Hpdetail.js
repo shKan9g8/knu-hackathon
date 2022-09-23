@@ -19,7 +19,7 @@ export default function Hpdetail() {
                         { data.hospitals.map((hospital,index)=>{
                             if (hospital.id==id){
                                 return(
-                                    <li style={{whiteSpace:'pre-wrap'}}>
+                                    <li style={{ whiteSpace: 'pre-wrap'}}>
                                     {hospital.content}
                                     {/*hospital.detail.map((cont)=>cont)*/}
                                     </li>
