@@ -3,14 +3,14 @@ import GoogleMapReact from 'google-map-react';
 import database from '../db/data.json'
 import mapper from './mapper.css'
 
-const MyMarker = ({ onClick, $hover, place }) => { // ¸¶Ä¿ Á¤ÀÇ
+const MyMarker = ({ onClick, $hover, place }) => { // ë§ˆì»¤ ì •ì˜
 
     const [icon, setIcon] = useState('img/Map-icon.png');
     const [iconWidth, setIconWidth] = useState("30px");
     const changeIcon = () => {
         setIconWidth("30px");
     }
-    if ($hover) { // ¸¶Ä¿¿¡ Ä¿¼­¸¦ ¶ç¿üÀ»¶§
+    if ($hover) { // ë§ˆì»¤ì— ì»¤ì„œë¥¼ ë„ì› ì„ë•Œ
         return (
             <div>
                 <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
@@ -18,7 +18,7 @@ const MyMarker = ({ onClick, $hover, place }) => { // ¸¶Ä¿ Á¤ÀÇ
                     onClick={changeIcon}
                     src={icon}
                 />
-                {< InfoWindow className="Wrapper" //InfoWindow Ã¢À» ¶ç¿î´Ù.
+                {< InfoWindow className="Wrapper" //InfoWindow ì°½ì„ ë„ìš´ë‹¤.
                     style={{ position: 'absolute', transform: 'translate(-50%,-90%)' }}
                     place={place} />}
 
@@ -26,7 +26,7 @@ const MyMarker = ({ onClick, $hover, place }) => { // ¸¶Ä¿ Á¤ÀÇ
 
         );
     }
-    else { //hover°¡ ¾Æ´Ï¸é infoWindowsÃ¢ÀÌ Á¸ÀçÇÏÁö ¾Ê´Â´Ù.
+    else { //hoverê°€ ì•„ë‹ˆë©´ infoWindowsì°½ì´ ì¡´ì¬í•˜ì§€ ì•ŠëŠ”ë‹¤.
         return (
             <div>
                 <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
@@ -43,9 +43,9 @@ const MyMarker = ({ onClick, $hover, place }) => { // ¸¶Ä¿ Á¤ÀÇ
 
 
 // InfoWindow component
-const InfoWindow = (props) => { // infoWindow Á¤ÀÇ
+const InfoWindow = (props) => { // infoWindow ì •ì˜
     const { place } = props;
-    const infoWindowStyle = { //infoÀÇ CSSºÎºĞ
+    const infoWindowStyle = { //infoì˜ CSSë¶€ë¶„
         position : "relative",
         bottom: 170,
         left: "-110px",
@@ -70,15 +70,20 @@ const InfoWindow = (props) => { // infoWindow Á¤ÀÇ
 
 export default function SimpleMap({test}) {
 
- /*   const [N,setN] = useState([10,10]);
+    const [N,setN] = useState([35.798,128.55]);
 
     useEffect(() => {
-        setN([database.hospitals[test].lat, database.hospitals[test].lng]);
+        if (test)
+            setN([database.hospitals[test].lat, database.hospitals[test].lng]);
+        else {
+            test = 1;
+            setN([35.798, 128.55])
+        }
 
-    }, [[database.hospitals[test].lat, database.hospitals[test].lng]])
+    },[test])
 
 
-    console.log(database.hospitals[test].lat)*/
+//    console.log(database.hospitals[test].lat)
 
 
     const defaultProps = {
@@ -100,14 +105,14 @@ export default function SimpleMap({test}) {
                     bootstrapURLKeys={{ key: "" }}
                     defaultCenter={defaultProps.center}
                     defaultZoom={defaultProps.zoom}
- //                   center={N} //±âº»ÀûÀ¸·Î º¸¿©ÁÖ´Â À§µµ °æµµ
- //                   zoom={13}
+                    center={N} //ê¸°ë³¸ì ìœ¼ë¡œ ë³´ì—¬ì£¼ëŠ” ìœ„ë„ ê²½ë„
+                    zoom={13}
                     fullscreenControl={false}
                     options={defaultMapOptions}
                 >
                     {database.hospitals.map((data, key) => {
                         return (
-                            <MyMarker key={key} lat={data.lat} lng={data.lng} place={data} tooltip='hello' /> // data´Â json¿¡¼­ ¹Ş¾Æ¿Â °Í, lat°ú lng·Î À§µµ °æµµ ¸¶Ä¿ Á¤º¸ Ãß°¡
+                            <MyMarker key={key} lat={data.lat} lng={data.lng} place={data} tooltip='hello' /> // dataëŠ” jsonì—ì„œ ë°›ì•„ì˜¨ ê²ƒ, latê³¼ lngë¡œ ìœ„ë„ ê²½ë„ ë§ˆì»¤ ì •ë³´ ì¶”ê°€
                         );
                     })}
                 </GoogleMapReact>
