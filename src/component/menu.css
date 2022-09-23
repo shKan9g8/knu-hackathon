@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+@font-face {
+    font-family: "Maple";
+    font-weight: 50;
+    src: url("../fonts/Maplestory Light.ttf") format("truetype");
+}
 body {
     text-align: center;
     padding: 100px;
@@ -14,10 +17,12 @@ body {
 }
 
 button {
-    position : relative;
-    margin: 8px;
+    position : absolute;
+    margin: 6px;
     white-space: nowrap;
     top : 12px;
+    text-align-last: center;
+    line-height: 2px;
 }
 
 .w-btn {
@@ -316,8 +321,11 @@ button {
     transform: translate(-50%, -50%);
     animation: ring 1.5s infinite;
 }
+
+
 .txt {
     position: relative;
-    top: 75px;
+    top: 100px;
     left: 0px;
+    font-family : Maple;
 }
