@@ -1,9 +1,15 @@
 .Logo{
     width: auto;
-    height: auto;
+    height: 1000px;
     text-align: center;
     align-items: center;
-    padding-top: 10%;
+    animation : testKeyword;
+    padding-top : 2%;
+}
+
+img{
+    max-height:100%;
+    max-width:100%;
 }
 
 @keyframes testKeyword {
