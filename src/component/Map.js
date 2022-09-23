@@ -70,7 +70,7 @@ const InfoWindow = (props) => { // infoWindow 정의
 
 export default function SimpleMap({test}) {
 
-    const [N,setN] = useState([10,10]);
+ /*   const [N,setN] = useState([10,10]);
 
     useEffect(() => {
         setN([database.hospitals[test].lat, database.hospitals[test].lng]);
@@ -78,7 +78,7 @@ export default function SimpleMap({test}) {
     }, [[database.hospitals[test].lat, database.hospitals[test].lng]])
 
 
-    console.log(database.hospitals[test].lat)
+    console.log(database.hospitals[test].lat)*/
 
 
     const defaultProps = {
@@ -100,9 +100,8 @@ export default function SimpleMap({test}) {
                     bootstrapURLKeys={{ key: "" }}
                     defaultCenter={defaultProps.center}
                     defaultZoom={defaultProps.zoom}
-                    center={N} //기본적으로 보여주는 위도 경도
-                    zoom={13}
-                    Center={{ lat: database.hospitals[test].lat, lng: database.hospitals[test].lng }}
+ //                   center={N} //기본적으로 보여주는 위도 경도
+ //                   zoom={13}
                     fullscreenControl={false}
                     options={defaultMapOptions}
                 >
