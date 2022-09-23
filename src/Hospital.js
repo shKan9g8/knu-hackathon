@@ -27,10 +27,10 @@ export default function Hospital() {
                         <Title test = {test}/>
                     </div>
                     <div className = 'selector-container'>
-                      <Menu dataname = {dataname}/>
+                      <Menu dataname = {dataname}/><br/>
                       {
                         test?
-                        <Link to={"/"+test}>바로가기</Link>
+                        <Link to={"/"+test}><button style={{"background-color":"gray"}}>Show more</button></Link>
                         :null
                     }<br/>
                       <Link to={'/test'}>더보기</Link>

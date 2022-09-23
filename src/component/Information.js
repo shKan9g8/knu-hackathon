@@ -31,15 +31,13 @@ export default function Information({hp_id}) {
             }
           <div id={length} className='flex-item' style={{"visibility":"hidden"}}/>
           <div className='flex-item' style={{"visibility":"hidden"}}/>
-            
-            <a href={"#"+(pos-1)} onClick={()=>click(-1)} className='fixed-button' style={{"left":"100px","bottom":"50px"}}>
-              left
-            </a>
-            <a href={"#"+(pos+1)} onClick={()=>click(1)} className='fixed-button' style={{"right":"100px","bottom":"50px"}}>
-              right
-            </a>
         </div>
-
+        <a href={"#"+(pos-1)} onClick={()=>click(-1)} className='fixed-button' style={{"left":"10px","top":"100px"}}>
+              <button style={{"background-color":"gray"}}>left</button>
+            </a>
+            <a href={"#"+(pos+1)} onClick={()=>click(1)} className='fixed-button' style={{"right":"10px","top":"100px"}}>
+              <button style={{"background-color":"gray"}}>right</button>
+            </a>
         </>
     );
 } 
