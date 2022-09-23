@@ -1,4 +1,6 @@
+import { LinearProgress } from '@mui/material';
 import React,{useRef, useState} from 'react';
+import { Link } from 'react-router-dom';
 import "./crawled.css"
 import crawl_data from './db/crawling.json';
 
@@ -35,8 +37,9 @@ export default function Crawled() {
                         <button className='button-item' onClick={leftClick}>left</button>
                         <button className='button-item' onClick={rightClick}>right</button>
                     </div>
+                    <Link to="/main">뒤로가기</Link>
                     </div>
-
+                    
                 </div>
     );
 } 

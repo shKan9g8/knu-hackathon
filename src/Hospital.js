@@ -28,7 +28,11 @@ export default function Hospital() {
                     </div>
                     <div className = 'selector-container'>
                       <Menu dataname = {dataname}/>
-                      <Link to={'/'+test}>바로가기 </Link><br/>
+                      {
+                        test?
+                        <Link to={"/"+test}>바로가기</Link>
+                        :null
+                    }<br/>
                       <Link to={'/test'}>더보기</Link>
                     </div>
                     <div className='map-container'>
