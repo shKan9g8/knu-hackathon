@@ -30,6 +30,7 @@
 }
 .index-container{   
     position: relative;
+    justify-content: center;
     grid-column-start:1;
     grid-column-end:3;
 }
