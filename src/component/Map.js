@@ -11,19 +11,35 @@ const MyMarker = ({ onClick, $hover, place }) => {
         /*        setIcon('img/hospital.png')*/
         setIconWidth("30px");
     }
-    return (
-        <div>
-            <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
-                style={{ position: 'absolute', transform: 'translate(-50%,-50%)' }}
-                onClick={changeIcon}
-                src={icon}
-            />
-            {< InfoWindow className="Wrapper"
-                style={{ position: 'absolute', transform: 'translate(-50%,-90%)' }}
-                place={place} />}
+    if ($hover) {
+        return (
+            <div>
+                <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
+                    style={{ position: 'absolute', transform: 'translate(-50%,-50%)' }}
+                    onClick={changeIcon}
+                    src={icon}
+                />
+                {< InfoWindow className="Wrapper"
+                    style={{ position: 'absolute', transform: 'translate(-50%,-90%)' }}
+                    place={place} />}
 
-        </div>
-            );
+            </div>
+
+        );
+    }
+    else {
+        return (
+            <div>
+                <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
+                    style={{ position: 'absolute', transform: 'translate(-50%,-50%)' }}
+                    onClick={changeIcon}
+                    src={icon}
+                />
+
+            </div>
+
+        );
+    }
 };
 
 
