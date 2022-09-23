@@ -1,0 +1,98 @@
+﻿.title1{
+    display : flex;
+    position: absolute;
+    left : 270px;
+    padding-top : 15px;
+}
+.title2 {
+    display: flex;
+    position: absolute;
+    left: 180px;
+    padding-top: 20px;
+}
+.title3 {
+    display: flex;
+    position: absolute;
+    left: 270px;
+    padding-top: 15px;
+}
+.title4 {
+    display: flex;
+    position: absolute;
+    left: 290px;
+    padding-top: 15px;
+}
+.title5 {
+    display: flex;
+    position: absolute;
+    left: 250px;
+    padding-top: 15px;
+}
+.title6 {
+    display: flex;
+    position: absolute;
+    left: auto;
+    padding-top: 15px;
+}
+.title7 {
+    display: flex;
+    position: absolute;
+    left: 180px;
+    padding-top : 10px;
+}
+.title8 {
+    display: flex;
+    position: absolute;
+    left: 180px;
+    padding-top : 30px;
+}
+.title9 {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    padding-top: 15px;
+}
+.title10 {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    padding-top: 15px;
+}
+.title11 {
+    display: flex;
+    position: absolute;
+    left: 200px;
+    padding-top: 15px;
+}
+.title12 {
+    display: flex;
+    position: absolute;
+    left: 190px;
+    padding-top: 15px;
+}
+.title13 {
+    display: flex;
+    position: absolute;
+    left: 230px;
+    padding-top: 15px;
+}
+.title14 {
+    display: flex;
+    position: absolute;
+    left: 180px;
+    padding-top: 15px;
+}
+.title15 {
+    display: flex;
+    position: absolute;
+    left: 180px;
+    padding-top: 15px;
+}
+.smallsize{
+    font-size:25px;
+    position : relative;
+    word-break : break-all;
+    left : 30px;
+    white-space : pre-wrap;
+    padding-top : 10px;
+}
