@@ -23,3 +23,29 @@
     width: 60px;
     border: 1px solid transparent;
 }
+
+.Wrapper {
+    position : absolute;
+    top : 0;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    justify-content: center;
+    align-items: center;
+    width : fit-content;
+    height : fit-content;
+    user-select : none;
+    transform : translate(-50%,90%);
+    padding : 10px;
+}
+
+.Wrapper_hover {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: fit-content;
+    height: fit-content;
+    user-select: none;
+    transform: translate(-50%,90%);
+    padding : 10px;
+}
