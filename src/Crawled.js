@@ -29,7 +29,8 @@ export default function Crawled() {
                         {
                             crawl_data.map((data,index)=>{
                                 if(index<((menu_index+1)*6) && index>=(menu_index*6)){
-                                    return <div className='menu-item' onClick={()=>set_id(index+1)}>{data.title}</div>
+                                    return <div className='menu-item' onClick={()=>set_id(index+1)}>{data.title}<br/>
+                                    <a href={data.link}>바로가기</a><br/>{data.date}</div>
                                 }
                             })
                         }
