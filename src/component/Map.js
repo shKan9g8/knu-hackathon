@@ -74,7 +74,7 @@ export default function SimpleMap({test}) {
 
     useEffect(() => {
         if (test)
-            setN([database.hospitals[test].lat, database.hospitals[test].lng]);
+            setN([database.hospitals[test-1].lat, database.hospitals[test-1].lng]);
         else {
             test = 1;
             setN([35.798, 128.55])
