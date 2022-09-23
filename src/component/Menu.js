@@ -1,44 +1,34 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { H_Data } from './H_Data';
-import H5 from './H5.js';
-import H4 from './H4.js';
-import H3 from './H3.js';
-import H2 from './H2.js';
-import H1 from './H1.js';
+import database from '../db/data.json';
 function Menu({dataname}){
   const [content, setContent] = useState();
   const handleClickButton = e => {
-    const { name } = e.target;
-    setContent(name);
+    const { id } = e.target;
+    setContent(id);
+    console.log(id);
+    console.log(content);
   };
   dataname(content);
-  const selectComponent = {
-    first: <H1 />,
-    second: <H2 />,
-    third: <H3 />,
-    fourth: <H4 />,
-    fifth: <H5 />,
-  };
 
   return (
     <div>
       <Container>
-        {H_Data.map(data => {
+        {database.hospitals.map(data => {
           return (
-            <Button onClick={handleClickButton} name={data.name} key={data.id}>
-              {data.text}
+            <Button onClick={handleClickButton} name={data.name} id={data.id} class = "target">
+              {data.id}
             </Button>
           );
         })}
       </Container>
       {content && <Content>
-        {H_Data.map(data => {
-          if (data.name == content)
+        {database.hospitals.map(data => {
+          if (data.id == content)
           {
             return (
               <div>
-                {data.latitude} {data.longitude}
+                {data.content}
                 </div>
                 );
           }
