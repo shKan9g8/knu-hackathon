@@ -1,24 +1,23 @@
 
 .containers{
     width: 1500px;
-    min-height: 800px;
+    min-height: 1000px;
     margin: auto;
     place-content: center;
     display:grid;
     grid-template-columns: 45% 45%; /*로고 가로 메뉴 가로*/
-    grid-template-rows: 15% 15% 75%; /*로고 세로 메뉴 세로 맵 세로*/
+    grid-template-rows: 150px 150px 750px; /*로고 세로 메뉴 세로 맵 세로*/
     align-content: center;
     justify-content: center;
-    column-gap: 20px;
-    row-gap: 10px;
+    column-gap: 40px;
+    row-gap: 30px;
     background-color: black;
 }
-
 .containers > div{
     background-color: white;
     text-align: center;
     padding: 10px 10px;
-    font-size: 40px;
+    font-size: 35px;
     margin: 10px;
 }
 .map-container{   /*map*/
@@ -89,3 +88,21 @@ button:hover {
       transform: scale(1) translateX(0px) translateY(0px);
     }
   }
+.MoveLink1{
+  position : absolute;
+  margin: 0px;
+  top : 850px;
+  left : 1120px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+}
+.MoveLink2{
+  position : absolute;
+  margin: 0px;
+  top : 900px;
+  left : 1134px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+}
