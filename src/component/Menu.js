@@ -19,21 +19,21 @@ function Menu({dataname}){
           if(data.id <= 5)
           {
           return (
-            <button class="w-btn-outline w-btn-pink-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
+            <button key={data.id} className="w-btn-outline w-btn-pink-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
               {data.id}
             </button>
           );
           }
           else if (data.id <= 10 && data.id > 5){
             return(
-            <button class="w-btn-outline w-btn-blue-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
+            <button key={data.id} className="w-btn-outline w-btn-blue-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
             {data.id}
           </button>
             );
           }
           else if (data.id <= 15 && data.id > 10){
             return(
-            <button class="w-btn-outline w-btn-yellow-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
+            <button key={data.id} className="w-btn-outline w-btn-yellow-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
             {data.id}
           </button>
             );
@@ -45,7 +45,7 @@ function Menu({dataname}){
           if (data.id == content)
           {
             return (
-              <div className = 'txt'>
+              <div key={data.id} className = 'txt'>
                 {data.content}
                 </div>
                 );

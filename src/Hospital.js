@@ -30,7 +30,7 @@ export default function Hospital() {
                       <Menu dataname = {dataname}/><br/>
                       {
                         test?
-                        <Link to={"/"+test}><button style={{"background-color":"gray"}}>Show more</button></Link>
+                        <Link to={"/"+test}><button style={{"backgroundColor":"gray"}}>Show more</button></Link>
                         :null
                     }<br/>
                       <Link to={'/test'}>더보기</Link>

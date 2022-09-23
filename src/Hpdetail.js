@@ -14,7 +14,7 @@ export default function Hpdetail() {
                         {id>=1&id<=15?<img src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
                     </div>
                     <div>
-                        <Link to='/main'><button style={{"background-color":"gray"}}>뒤로가기</button></Link>
+                        <Link to='/main'><button style={{"backgroundColor":"gray"}}>뒤로가기</button></Link>
                         { data.hospitals.map((hospital,index)=>{
                             if (hospital.id==id){
                                 return(

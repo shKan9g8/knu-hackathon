@@ -116,7 +116,7 @@ function Title({test}){
       return (
           <div className='title13'>
               <img src="img/9913.gif" />
-              <text style={{ "white-space": "normal" }}> {database.hospitals[12].name}</text>
+              <text style={{ "whiteSpace": "normal" }}> {database.hospitals[12].name}</text>
           </div>);
   }
   else if (test == '14')

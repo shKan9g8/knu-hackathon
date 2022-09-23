@@ -33,10 +33,10 @@ export default function Information({hp_id}) {
           <div className='flex-item' style={{"visibility":"hidden"}}/>
         </div>
         <a href={"#"+(pos-1)} onClick={()=>click(-1)} className='fixed-button' style={{"left":"10px","top":"100px"}}>
-              <button style={{"background-color":"gray"}}>left</button>
+              <button style={{"backgroundColor":"gray"}}>left</button>
             </a>
             <a href={"#"+(pos+1)} onClick={()=>click(1)} className='fixed-button' style={{"right":"10px","top":"100px"}}>
-              <button style={{"background-color":"gray"}}>right</button>
+              <button style={{"backgroundColor":"gray"}}>right</button>
             </a>
         </>
     );
