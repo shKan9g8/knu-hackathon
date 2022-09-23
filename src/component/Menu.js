@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import database from '../db/data.json';
+import './menu.css';
 function Menu({dataname}){
   const [content, setContent] = useState();
   const handleClickButton = e => {
@@ -15,11 +16,28 @@ function Menu({dataname}){
     <div>
       <Container>
         {database.hospitals.map(data => {
+          if(data.id <= 5)
+          {
           return (
-            <Button onClick={handleClickButton} name={data.name} id={data.id} class = "target">
+            <button class="w-btn-outline w-btn-pink-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
               {data.id}
-            </Button>
+            </button>
           );
+          }
+          else if (data.id <= 10 && data.id > 5){
+            return(
+            <button class="w-btn-outline w-btn-blue-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
+            {data.id}
+          </button>
+            );
+          }
+          else if (data.id <= 15 && data.id > 10){
+            return(
+            <button class="w-btn-outline w-btn-yellow-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
+            {data.id}
+          </button>
+            );
+          }
         })}
       </Container>
       {content && <Content>
@@ -27,7 +45,7 @@ function Menu({dataname}){
           if (data.id == content)
           {
             return (
-              <div>
+              <div className = 'txt'>
                 {data.content}
                 </div>
                 );
@@ -46,16 +64,11 @@ const Container = styled.div`
   height: 20vh;
 `;
 
-const Button = styled.button`
-  padding: 1rem 2rem;
-  margin-right: 1rem;
-  color: #111111;
-  background-color: #eeeeee;
-  border-radius: 2rem;
-`;
 
 const Content = styled.div`
   ${(props) => props.theme.main};
+  margin : auto;
+  text-align : center;
   width: 100%;
   height: 100%;
 `;
