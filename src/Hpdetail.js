@@ -1,6 +1,7 @@
 import React,{useRef, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import "./Hpdetail.css";
 import Information from './component/Information';
 import data from './db/data.json'
@@ -8,13 +9,12 @@ import data from './db/data.json'
 export default function Hpdetail() {
     const {id}=useParams();
     return ( 
-        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
                 <div className='container'>
                     <div>
                         {id>=1&id<=15?<img src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
                     </div>
                     <div>
-                        Text
+                        <Link to='/main'>뒤로가기</Link>
                         { data.hospitals.map((hospital,index)=>{
                             if (hospital.id==id){
                                 return(
@@ -33,6 +33,5 @@ export default function Hpdetail() {
                     </div>
 
                 </div>
-        </motion.div>
     );
 } 
