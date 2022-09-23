@@ -26,11 +26,10 @@ export default function Hospital() {
                         <Title test = {test}/>
                     </div>
                     <div className = 'selector-container'>
-                      MENU
                       <Menu dataname = {dataname}/>
                     </div>
                     <div className='map-container'>
-                        <Map />
+                        <Map test = {test}/>
                     </div>
 
                 </div>
