@@ -31,31 +31,31 @@
 .title6 {
     display: flex;
     position: absolute;
-    left: auto;
-    padding-top: 15px;
+    left: 175px;
+    padding-top: 0px;
 }
 .title7 {
     display: flex;
     position: absolute;
     left: 180px;
-    padding-top : 10px;
+    padding-top : 20px;
 }
 .title8 {
     display: flex;
     position: absolute;
     left: 180px;
-    padding-top : 30px;
+    padding-top : 20px;
 }
 .title9 {
     display: flex;
     position: absolute;
-    left: 0px;
+    left: 175px;
     padding-top: 15px;
 }
 .title10 {
     display: flex;
     position: absolute;
-    left: 0px;
+    left: 185px;
     padding-top: 15px;
 }
 .title11 {
@@ -68,7 +68,7 @@
     display: flex;
     position: absolute;
     left: 190px;
-    padding-top: 15px;
+    padding-top: 0px;
 }
 .title13 {
     display: flex;
@@ -80,7 +80,7 @@
     display: flex;
     position: absolute;
     left: 180px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .title15 {
     display: flex;
@@ -92,7 +92,6 @@
     font-size:25px;
     position : relative;
     word-break : break-all;
-    left : 30px;
+    left : 0px;
     white-space : pre-wrap;
-    padding-top : 10px;
 }
