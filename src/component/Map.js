@@ -1,17 +1,16 @@
-import React, { useState, Wrapper } from "react";
+import React, { useState, Wrapper, useEffect } from "react";
 import GoogleMapReact from 'google-map-react';
 import database from '../db/data.json'
 import mapper from './mapper.css'
 
-const MyMarker = ({ onClick, $hover, place }) => {
+const MyMarker = ({ onClick, $hover, place }) => { // 마커 정의
 
     const [icon, setIcon] = useState('img/Map-icon.png');
     const [iconWidth, setIconWidth] = useState("30px");
     const changeIcon = () => {
-        /*        setIcon('img/hospital.png')*/
         setIconWidth("30px");
     }
-    if ($hover) {
+    if ($hover) { // 마커에 커서를 띄웠을때
         return (
             <div>
                 <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
@@ -19,7 +18,7 @@ const MyMarker = ({ onClick, $hover, place }) => {
                     onClick={changeIcon}
                     src={icon}
                 />
-                {< InfoWindow className="Wrapper"
+                {< InfoWindow className="Wrapper" //InfoWindow 창을 띄운다.
                     style={{ position: 'absolute', transform: 'translate(-50%,-90%)' }}
                     place={place} />}
 
@@ -27,7 +26,7 @@ const MyMarker = ({ onClick, $hover, place }) => {
 
         );
     }
-    else {
+    else { //hover가 아니면 infoWindows창이 존재하지 않는다.
         return (
             <div>
                 <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
@@ -44,9 +43,9 @@ const MyMarker = ({ onClick, $hover, place }) => {
 
 
 // InfoWindow component
-const InfoWindow = (props) => {
+const InfoWindow = (props) => { // infoWindow 정의
     const { place } = props;
-    const infoWindowStyle = {
+    const infoWindowStyle = { //info의 CSS부분
         position : "relative",
         bottom: 170,
         left: "-110px",
@@ -69,7 +68,17 @@ const InfoWindow = (props) => {
 };
 
 
-export default function SimpleMap() {
+export default function SimpleMap({test}) {
+
+    const [N,setN] = useState([10,10]);
+
+    useEffect(() => {
+        setN([database.hospitals[test].lat, database.hospitals[test].lng]);
+
+    }, [[database.hospitals[test].lat, database.hospitals[test].lng]])
+
+
+    console.log(database.hospitals[test].lat)
 
 
     const defaultProps = {
@@ -86,21 +95,24 @@ export default function SimpleMap() {
     }
 
     return (
-        <div style={{ height: '100vh', width: '100%' }}>
-            <GoogleMapReact
-                bootstrapURLKeys={{ key: "" }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-                center={{ lat: 35.79835602, lng: 128.5502627 }}
-                fullscreenControl={false }
-                options={defaultMapOptions }
-            >
+            <div style={{ height: '100vh', width: '100%' }}>
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: "" }}
+                    defaultCenter={defaultProps.center}
+                    defaultZoom={defaultProps.zoom}
+                    center={N} //기본적으로 보여주는 위도 경도
+                    zoom={13}
+                    Center={{ lat: database.hospitals[test].lat, lng: database.hospitals[test].lng }}
+                    fullscreenControl={false}
+                    options={defaultMapOptions}
+                >
                     {database.hospitals.map((data, key) => {
                         return (
-                            <MyMarker key={key} lat={data.lat} lng={data.lng} place={data}  tooltip='hello' />
-                                );
-                    } )}
-            </GoogleMapReact>
-        </div>
-    );
+                            <MyMarker key={key} lat={data.lat} lng={data.lng} place={data} tooltip='hello' /> // data는 json에서 받아온 것, lat과 lng로 위도 경도 마커 정보 추가
+                        );
+                    })}
+                </GoogleMapReact>
+            </div>
+        );
+    
 }
