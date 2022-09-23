@@ -33,7 +33,7 @@ def hackerton():
             date_list.append(gallery.find_element(By.CLASS_NAME,'date').text)
             link_list.append(gallery.find_element(By.TAG_NAME,'a').get_attribute('href'))
             imgUrl=gallery.find_element(By.TAG_NAME,'img').get_attribute('src')
-            urllib.request.urlretrieve(imgUrl,str(count)+".png")
+            urllib.request.urlretrieve(imgUrl,"../public/img/"+str(count)+".png")
             count=count+1
 
     return id_list, title_list, date_list, link_list
@@ -41,4 +41,4 @@ def hackerton():
 id_list,title_list,date_list, link_list=hackerton()
 
 df=pd.DataFrame({'title':title_list,'date':date_list,'link':link_list})
-df.to_json('crawling.json',orient='records',force_ascii=False)
+df.to_json('../src/db/crawling.json',orient='records',force_ascii=False)

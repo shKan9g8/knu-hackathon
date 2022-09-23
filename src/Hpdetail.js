@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { motion } from "framer-motion";
 import "./Hpdetail.css";
 import Information from './component/Information';
+import data from './db/data.json'
 
 export default function Hpdetail() {
     const {id}=useParams();
@@ -15,9 +16,21 @@ export default function Hpdetail() {
                     </div>
                     <div>
                         Text
+                        { data.hospitals.map((hospital,index)=>{
+                            if (hospital.id==id){
+                                return(
+                                    <li style={{whiteSpace:'pre-wrap'}}>
+                                    {hospital.content}
+                                    {/*hospital.detail.map((cont)=>cont)*/}
+                                    </li>
+                                );
+                                }
+                            }
+                        )
+                        }
                     </div>
                     <div className='index-container'>
-                        <Information/>
+                        <Information hp_id={id}/>
                     </div>
 
                 </div>
