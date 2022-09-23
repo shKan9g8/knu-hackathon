@@ -1,5 +1,5 @@
 import React,{useRef, useState} from 'react';
-import "./Crawled.css"
+import "./crawled.css"
 import crawl_data from './db/crawling.json';
 
 export default function Crawled() {
