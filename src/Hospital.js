@@ -8,8 +8,8 @@ import Title from "./component/Title.js";
 export default function Hospital() {
   const Content = styled.div`
   ${(props) => props.theme.main};
-  width: 100%;
-  height: 100%;
+  width: 10%;
+  height: 10%;
 `;
     const [test,setTest] = useState();
     const dataname = (x) => {
@@ -21,7 +21,7 @@ export default function Hospital() {
 
     return ( 
         <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
-                <div className='container'>
+                <div className='containers'>
                     <div>
                         <Title test = {test}/>
                     </div>
