@@ -10,12 +10,22 @@ export default function PublichHealth() {
             <LogoMenu></LogoMenu>
 
             <div className="PHcontainer">
-                <div>
+                <div style={{ "borderBlock" : "3px solid gray"}}>
+                    <text style={{ "font-size": "100px", "font-family": 'wemade' }}>{PHDB["WhatIs"]}</text>
                     <img src={"img/PublicHealth.jpg"} />
-                    <p style={{ "font-size": "40px", "padding": "10px" }}>{PHDB["summary"]}</p>
+                    <p style={{ "font-size": "40px", "padding": "10px", "font-family": 'wemade' }}>{PHDB["summary"]}</p>
 
                 </div>
-                <div>
+                <div style={{ "borderBlock": "3px solid gray" }}>
+                    <p style={{ "font-size": "25px", "padding": "10px", "font-family": 'nanum'}}>{PHDB["content1"]}</p>
+                    <p style={{ "font-size": "25px", "padding": "10px", "font-family": 'nanum' }}>{PHDB["content2"]}</p>
+                    <p style={{ "font-size": "40px", "padding": "10px", "font-family": 'nanum' }}>{PHDB["WhatIs2"]}</p>
+
+                    <p style={{ "font-size": "25px", "padding": "10px" }}>{PHDB["content3"]}</p>
+                    <p style={{ "font-size": "25px", "padding": "10px" }}>{PHDB["content4"]}</p>
+                    <a href = "https://www.ppm.or.kr/"><p style={{ "font-size": "25px", "padding": "10px" }}>https://www.ppm.or.kr/</p></a>
+
+
                 </div>
                 </div>
             <div className="blank" style={{ "height": "70px", "width": "99vw", "background": "white" }}></div>
