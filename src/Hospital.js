@@ -30,10 +30,10 @@ export default function Hospital() {
                       <Menu dataname = {dataname}/><br/>
                       {
                         test?
-                        <Link to={"/"+test}><button style={{"backgroundColor":"gray"}}>Show more</button></Link>
+                        <Link to={"/"+test}><buttons className="w-btn-outlines w-btn-gra1" type="button">병원 정보</buttons></Link>
                         :null
                     }<br/>
-                      <Link to={'/test'}>더보기</Link>
+                      <Link to={'/test'}><buttons className="w-btn-outlines w-btn-gra2" type="button">대구의 소식</buttons></Link>
                     </div>
                     <div className='map-container'>
                         <Map test = {test}/>
