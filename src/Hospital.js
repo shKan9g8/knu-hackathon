@@ -43,7 +43,7 @@ export default function Hospital() {
                         }<br/>
                             <Link to={'/test'}><buttons className="w-btn-outlines w-btn-gra2" type="button">대구의 소식</buttons></Link>
                         </div>
-                    <div className='map-container' style={{ "border": "3px solid lightgreen", "border-radius": "1em" }}>
+                    <div className='map-container' style={{ "border": "3px solid lightgreen", "border-radius": "1em" ,"overflow":"hidden"}}>
                             <Map test = {test}/>
                         </div>
 
