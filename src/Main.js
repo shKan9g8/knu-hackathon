@@ -100,7 +100,7 @@ const ImageMarked = styled("span")(({ theme }) => ({
 
 const clicked=(id)=>{
   if(id==1){
-    window.location.assign('/')
+    window.location.assign('/PublicHealth')
   }
   else if(id==2){
     window.location.assign('/hospital')
@@ -112,11 +112,12 @@ const clicked=(id)=>{
 
 
 export default function ButtonBases() {
-  document.body.style.backgroundColor="white"
+  document.body.style.backgroundColor="white";
   return (
     <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:2}} >
+      <div style={{"position": "absolute","top": "50%","left": "50%","transform": "translate(-50%, -50%)"}}>
     <Box
-      sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
+      sx={{ display: "flex", flexWrap: "wrap", minWidth: "1200px", width: "100%" ,transform:"translate(-100px)"}}
     >
       {images.map((image) => (
         <ImageButton 
@@ -148,6 +149,7 @@ export default function ButtonBases() {
         </ImageButton>
       ))}
     </Box>
+    </div>
     </motion.div>
   );
 }
