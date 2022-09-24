@@ -13,14 +13,19 @@ const MyMarker = ({ onClick, $hover, place }) => {
     if ($hover) { 
         return (
             <div>
+                <div>
+                {< InfoWindow className="Wrapper"
+                    style={{ position: 'relative', transform: 'translate(-50%,-50%)' }}
+                        place={place} />}
+                </div>
+                <div>
                 <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
-                    style={{ position: 'absolute', transform: 'translate(-50%,-50%)' }}
+                    style={{ position: 'relative', transform: 'translate(-50%,-250%)' }}
                     onClick={changeIcon}
                     src={icon}
-                />
-                {< InfoWindow className="Wrapper" 
-                    style={{ position: 'absolute', transform: 'translate(-50%,-90%)' }}
-                    place={place} />}
+                    />
+                    </div>
+
 
             </div>
 
@@ -30,7 +35,7 @@ const MyMarker = ({ onClick, $hover, place }) => {
         return (
             <div>
                 <img className={$hover ? "icon_hover_on" : "icon_hover_off"}
-                    style={{ position: 'absolute', transform: 'translate(-50%,-50%)' }}
+                    style={{ 'position': 'relative', 'transform': 'translate(-50%,-50%)' }}
                     onClick={changeIcon}
                     src={icon}
                 />
@@ -47,13 +52,12 @@ const InfoWindow = (props) => {
     const { place } = props;
     const infoWindowStyle = { 
         position : "relative",
-        bottom: 170,
-        left: "-110px",
-        width: 220,
+        bottom: 200,
+        left: "-125px",
+        width: 260,
         backgroundColor: "white",
         boxShadow: "0 2px 7px 1px rgba(0, 0, 0, 0.3)",
         padding: 10,
-        fontSize: 14,
         zIndex: 100
 
     };
