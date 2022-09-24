@@ -18,25 +18,51 @@ function Menu({dataname}){
         {database.hospitals.map(data => {
           if(data.id <= 5)
           {
-          return (
-            <button key={data.id} className="w-btn-outline w-btn-pink-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
-              {data.nick}
-            </button>
-          );
+            if(data.id!=5){
+              return (
+                <button key={data.id} className="w-btn-outline w-btn-pink-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
+                  {data.nick}
+                </button>
+              );
+            }
+          else{
+            return (
+              <>
+              <button key={data.id} className="w-btn-outline w-btn-pink-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
+                {data.nick}
+              </button>
+              <br/>
+              </>
+            );
+          }
           }
           else if (data.id <= 10 && data.id > 5){
+            if(data.id!=10){
             return(
             <button key={data.id} className="w-btn-outline w-btn-blue-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
             {data.nick}
           </button>
             );
+            }
+            else{
+              return (
+                <>
+                <button key={data.id} className="w-btn-outline w-btn-blue-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id} >
+                  {data.nick}
+                </button>
+                <br/>
+                </>
+              );
           }
+        }
           else if (data.id <= 15 && data.id > 10){
             return(
             <button key={data.id} className="w-btn-outline w-btn-yellow-outline" type="button" onClick={handleClickButton} name={data.name} id={data.id}>
             {data.nick}
           </button>
             );
+
+        
           }
         })}
       </Container>

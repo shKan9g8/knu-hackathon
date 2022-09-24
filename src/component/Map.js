@@ -104,7 +104,7 @@ export default function SimpleMap({test}) {
     }
 
     return (
-            <div style={{ height: '100vh', width: '100%' }}>
+            <div style={{ height: '120%', width: '120%',overflow:"hidden" ,transform:"translate(-10%,-10%)"}}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: "" }}
                     defaultCenter={defaultProps.center}

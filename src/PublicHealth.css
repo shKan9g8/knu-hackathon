@@ -1,0 +1,30 @@
+﻿@font-face{
+    font-family: 'nanum';
+    src: url('./fonts/NanumGothic.ttf') format('ttf');
+    font-weight : bold;
+    font-style : normal;
+}
+@font-face {
+    font-family: 'Cafe24Light';
+    src: url('./fonts/Cafe24SsurroundAir.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Bold';
+    src: url('./fonts/Cafe24Ssurround.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+.body{
+    width:100%;
+    height:100%;
+}
+
+.PHcontainer{
+    width : 100vw;
+    height : 100vh;
+    display : grid;
+    grid-template-columns: 50% 50%;
+    
+}

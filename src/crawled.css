@@ -21,12 +21,15 @@
     margin: 10px;
 }
 .menu-container {
+    justify-content: center;
     margin: 0;
     display: grid;
     column-gap: 10px;
     row-gap: 10px;
     grid-template-columns: 40% 40%;
     left : 50%;
+    box-shadow:-5px 0 0 0 #a5090b;
+
 }
 .img-item {
     width: 800px;
