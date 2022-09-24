@@ -1,38 +1,63 @@
-.Logo{
-    width: auto;
-    height: 1000px;
-    text-align: center;
-    align-items: center;
-    animation : testKeyword;
-    padding-top : 2%;
+.divide{
+  display: grid;
+  width: 99vw;
+  grid-template-columns: 50% 50%;
+}
+.Others-img{
+  position: relative;
 }
 
-img{
-    max-height:100%;
-    max-width:100%;
+.Others-img>img{
+  position: absolute;
+  left : 50%;
+  top :35%;
+  border-radius: 15%;
+  animation : firstShow 3s forwards;
+  opacity: 0;
 }
 
-@keyframes testKeyword {
-    0% {
-      transform: scale(1);
-    }
-    40%{
-        transform: scale(0.2);
-    }
+.Logo-img{
+  max-width: 40%;
+  max-height: 40%;
+  text-align: center;
+  align-items: center;
+  padding-top : 2%;
+  position: relative;
+  right : 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%);
+  animation : secondShow 1.5s forwards;
+  animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+}
 
-    100% {
-      transform: scale(0.2) translateX(-500%) translateY(-370%);
-    }
+.Logo-img>img{
+  border-radius: 10%;
+}
+
+@keyframes firstShow {
+  0% {
+    opacity: 0;
+    transform: scale(1);
   }
-
-  @keyframes testKeyword2 {
-    0% {
-      opacity: 0;
-      transform: scale(0.1) translateX(50px) translateY(50px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: scale(1) translateX(0px) translateY(0px);
-    }
+  50%{
+    opacity: 1;
+    transform : translateY(-10%)
   }
+  100%{
+    opacity: 0;
+    transform : translateY(-10%)
+  }
+}
+
+
+@keyframes secondShow {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100%{
+    opacity: 1;
+    transform : translateX(10%)
+  }
+}
