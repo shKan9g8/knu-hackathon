@@ -1,6 +1,7 @@
 import React,{useRef, useState} from 'react';
 import "./Information.css";
 import data from '../db/data.json'
+import { Box } from '@mui/system';
 export default function Information({hp_id}) {
   var ind = data.hospitals[hp_id-1].detail2.contents;
   console.log()
@@ -25,7 +26,7 @@ export default function Information({hp_id}) {
               data.hospitals[hp_id-1].detail2.contents.map((cont,index)=>{
                 return <div key={index} className='flex-item'>
                   <li id={index} key={index}>{cont.title}</li>
-                  {cont.content}
+                  <Box>{cont.content}</Box>
                 </div>
               })  
             }
