@@ -50,12 +50,12 @@ a {
     place-content: center;
     display:grid;
     grid-template-columns: 45% 45%; /*로고 가로 메뉴 가로*/
-    grid-template-rows: 15% 15% 65%; /*로고 세로 메뉴 세로 맵 세로*/
+    grid-template-rows: 15% 15% 60%; /*로고 세로 메뉴 세로 맵 세로*/
     align-content: center;
     justify-content: center;
     column-gap: 40px;
     row-gap: 30px;
-    background-color: black;
+    background-color: lightgoldenrodyellow;
 }
 .containers > div{
     background-color: white;

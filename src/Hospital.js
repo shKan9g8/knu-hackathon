@@ -22,11 +22,11 @@ export default function Hospital() {
 
     return ( 
         <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
-                <div className='containers'>
-                    <div>
+            <div className='containers'>
+                <div style={{ "border": "3px solid lightgreen", "border-radius": "2em" }}>
                         <Title test = {test}/>
                     </div>
-                    <div className = 'selector-container'>
+                <div className='selector-container' style={{ "border": "3px solid lightgreen", "border-radius" : "2em"}}>
                       <Menu dataname = {dataname}/><br/>
                       {
                         test?
@@ -35,7 +35,7 @@ export default function Hospital() {
                     }<br/>
                       <Link to={'/test'}><buttons className="w-btn-outlines w-btn-gra2" type="button">대구의 소식</buttons></Link>
                     </div>
-                    <div className='map-container'>
+                <div className='map-container' style={{ "border": "3px solid lightgreen", "border-radius": "1em" }}>
                         <Map test = {test}/>
                     </div>
 
