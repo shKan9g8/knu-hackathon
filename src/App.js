@@ -15,6 +15,7 @@ export default function App() {
           <AnimatePresence>
             <Routes>
               <Route path="/test" element={<Crawled />}></Route>
+              <Route path="/hospital" element={<Hospital />}></Route>
               <Route path="/" element={<Logo />}></Route>
               <Route path="/Main" element={<Main />}></Route>
               <Route path="/:id" element={<Hpdetail />}></Route>

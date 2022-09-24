@@ -6,7 +6,6 @@ import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
 import Hospital from './Hospital';
 import { TableBody } from "@mui/material";
-import "./Main.css"
 import { motion } from "framer-motion";
 import { borderRadius } from "@mui/system";
 
@@ -104,10 +103,10 @@ const clicked=(id)=>{
     window.location.assign('/')
   }
   else if(id==2){
-    window.location.assign('/')
+    window.location.assign('/hospital')
   }
   else if(id==3){
-    window.location.assign('/')
+    window.location.assign('/test')
   }
 }
 
