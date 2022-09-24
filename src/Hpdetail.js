@@ -7,6 +7,7 @@ import Information from './component/Information';
 import data from './db/data.json'
 
 export default function Hpdetail() {
+    document.body.style.padding=0;
     const {id}=useParams();
     return ( 
                 <div className='container'>

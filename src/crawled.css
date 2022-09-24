@@ -1,6 +1,6 @@
 .container1{
-    width: 1500px;
-    min-height: 1000px;
+    width: 99vw;
+    min-height: 100vh;
     margin: auto;
     place-content: center;
     display:grid;

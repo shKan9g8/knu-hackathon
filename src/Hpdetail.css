@@ -6,13 +6,13 @@
 }
 
 .container {
-    width: 1500px;
-    min-height: 1000px;
+    width: 99vw;
+    min-height: 140vh;
     margin: auto;
     place-content: center;
     display: grid;
-    grid-template-columns: 735px 735px;
-    grid-template-rows: 580px 400px;
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 60% 39%;
     align-content: center;
     justify-content: center;
     column-gap: 10px;

@@ -7,6 +7,7 @@ import Map from "./component/Map.js";
 import Title from "./component/Title.js";
 import { Link } from 'react-router-dom';
 export default function Hospital() {
+    document.body.style.padding=0;
   const Content = styled.div`
   ${(props) => props.theme.main};
   width: 10%;

@@ -5,6 +5,7 @@ import "./crawled.css"
 import crawl_data from './db/crawling.json';
 
 export default function Crawled() {
+    document.body.style.padding=0;
     var [crawled_id,setID]=useState(0);
     var [menu_index,setIndex]=useState(0)
 
