@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import "./Hpdetail.css";
 import Information from './component/Information';
 import data from './db/data.json'
+import LogoMenu from './component/LogoMenu';
 
 export default function Hpdetail() {
     document.body.style.padding=0;
     const {id}=useParams();
     return ( 
+        <div>
+            <LogoMenu></LogoMenu>
                 <div className='container'>
                     <div>
                         {id>=1&id<=15?<img src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
@@ -32,6 +35,7 @@ export default function Hpdetail() {
                         <Information hp_id={id}/>
                     </div>
 
+                </div>
                 </div>
     );
 } 

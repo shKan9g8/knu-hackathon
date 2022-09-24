@@ -1,0 +1,8 @@
+.Logo-title {
+    font-family: Maple;
+    height: 59px;
+    float : left; 
+    font-size: 45px;
+    padding-inline: 50px;
+    box-shadow: 5px 0px 0px 0px #a5090b;
+}
