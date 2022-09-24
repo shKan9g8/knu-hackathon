@@ -7,9 +7,7 @@ buttons {
   text-decoration: none;
   display: inline-block;
 }
-a {
-  text-decoration: none;
-}
+
 .w-btns {
   position: relative;
   border: none;
