@@ -6,7 +6,7 @@ import mapper from './mapper.css'
 const MyMarker = ({ onClick, $hover, place }) => { 
 
     const [icon, setIcon] = useState('img/Map-icon.png');
-    const [iconWidth, setIconWidth] = useState("30px");
+    const [iconWidth, setIconWidth] = useState("50px");
     const changeIcon = () => {
         setIconWidth("30px");
     }
