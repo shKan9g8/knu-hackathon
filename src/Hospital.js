@@ -22,25 +22,33 @@ export default function Hospital() {
     };
 
     return ( 
-        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
-            <div className='containers'>
-                <div style={{ "border": "3px solid lightgreen", "border-radius": "2em" }}>
-                        <Title test = {test}/>
-                    </div>
-                <div className='selector-container' style={{ "border": "3px solid lightgreen", "border-radius" : "2em"}}>
-                      <Menu dataname = {dataname}/><br/>
-                      {
-                        test?
-                        <Link to={"/"+test}><buttons className="w-btn-outlines w-btn-gra1" type="button">병원 정보</buttons></Link>
-                        :null
-                    }<br/>
-                      <Link to={'/test'}><buttons className="w-btn-outlines w-btn-gra2" type="button">대구의 소식</buttons></Link>
-                    </div>
-                <div className='map-container' style={{ "border": "3px solid lightgreen", "border-radius": "1em" }}>
-                        <Map test = {test}/>
-                    </div>
+        <div>
+            <div class="label" style={{ "height": "20px", "width": "99vw", "background": "#ff3300" }}></div>
+            <div class="blank" style={{ "height": "60px", "width": "99vw", "background": "white" }}></div>
+            <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
+                <div className='containers'>
+                    <div style={{ "border": "3px solid lightgreen", "border-radius": "2em" }}>
+                            <Title test = {test}/>
+                        </div>
+                    <div className='selector-container' style={{ "border": "3px solid lightgreen", "border-radius" : "2em"}}>
+                            <Menu dataname = {dataname}/><br/>
+                            {
+                            test?
+                            <Link to={"/"+test}><buttons className="w-btn-outlines w-btn-gra1" type="button">병원 정보</buttons></Link>
+                            :null
+                        }<br/>
+                            <Link to={'/test'}><buttons className="w-btn-outlines w-btn-gra2" type="button">대구의 소식</buttons></Link>
+                        </div>
+                    <div className='map-container' style={{ "border": "3px solid lightgreen", "border-radius": "1em" }}>
+                            <Map test = {test}/>
+                        </div>
 
-                </div>
-        </motion.div>
-    );
+                    </div>
+                </motion.div>
+                <div class="blank" style={{ "height": "60px", "width": "99vw", "background": "white" }}></div>
+            <div class="label" style={{ "height": "20px", "width": "99vw", "background": "#ff3300" }}></div>
+
+            </div>
+         );
+
 } 

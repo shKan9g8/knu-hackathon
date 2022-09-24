@@ -9,6 +9,7 @@
     position: relative;
     width: 120px;
     border: 1px solid transparent;
+    z-index : 20;
 }
 
 .hover {
