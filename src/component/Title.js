@@ -27,7 +27,7 @@ function Title({test}){
       return (
       <div className='title3'>
           <img src="img/993.gif" />
-              <text style={{ "padding-top": "15px" }}>{database.hospitals[2].name}</text>
+              <text style={{ "padding-top": "20px" }}>{database.hospitals[2].name}</text>
       </div>);
   }
   else if (test == '4')
