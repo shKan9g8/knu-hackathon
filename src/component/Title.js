@@ -18,7 +18,7 @@ function Title({test}){
     return (
         <div className='title2'>
             <img src="img/992.gif" />
-            <text style={{ "font-size": "35px" }}>{database.hospitals[1].name}</text>
+            <text style={{ "font-size": "35px", "padding-top" : "8px" }}>{database.hospitals[1].name}</text>
         </div>);
     
   }
@@ -49,7 +49,7 @@ function Title({test}){
   else if (test == '6') //size down
   {
       return (
-          <div className='title6' style={{ "width": "700px" }}>
+          <div className='title6' style={{ "width": "650px" }}>
               <img src="img/996.gif" /> 
               <text className='smallsize'
                   style={{
@@ -67,7 +67,7 @@ function Title({test}){
           <div className='title7'>
               <img src="img/997.gif" />
               <text className='smallsize'
-                  style={{"padding-top" : "10px"} }
+                  style={{"padding-top" : "15px"} }
               > {database.hospitals[6].name}</text>
           </div>);
   }
@@ -79,7 +79,7 @@ function Title({test}){
               <text className='smallsize'
                   style={{
                       "font-size": "20px",
-                      "padding-top" : "20px"
+                      "padding-top" : "24px"
                   }}>
                   {database.hospitals[7].name}
               </text>
@@ -98,7 +98,7 @@ function Title({test}){
       return (
           <div className='title10'>
               <img src="img/9910.gif" />
-              <text style={{ "font-size": "25px", "padding-top": "20px" }}> {database.hospitals[9].name}</text>
+              <text style={{ "font-size": "25px", "padding-top": "25px" }}> {database.hospitals[9].name}</text>
           </div>);
   }
   else if (test == '11')
@@ -122,7 +122,7 @@ function Title({test}){
       return (
           <div className='title13'>
               <img src="img/9913.gif" />
-              <text style={{ "padding-top": "15px" }}>{database.hospitals[12].name}</text>
+              <text style={{ "padding-top": "25px" }}>{database.hospitals[12].name}</text>
           </div>);
   }
   else if (test == '14')
