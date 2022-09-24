@@ -3,10 +3,17 @@ import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
 import "./crawled.css"
 import crawl_data from './db/crawling.json';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 
 export default function Crawled() {
     document.body.style.padding=0;
-    var [crawled_id,setID]=useState(0);
+    var [crawled_id,setID]=useState(1);
     var [menu_index,setIndex]=useState(0)
 
     const set_id=(id)=>{
@@ -15,12 +22,18 @@ export default function Crawled() {
 
     const leftClick=()=>{
         setIndex(menu_index-1<=0?0:menu_index-1)
+        setID((menu_index)*6+1)
     }
 
     const rightClick=()=>{
-        setIndex(menu_index+1>10?9:menu_index+1)
+        setIndex(menu_index+1>9?9:menu_index+1)
+        setID((menu_index)*6+1)
     }
 
+    /*
+<div className='menu-item' onClick={()=>set_id(index+1)}>{data.title}<br/>
+                                    <a href={data.link}>바로가기</a><br/>{data.date}</div>
+                                    */
     return ( 
                 <div className='container1'>
                     <div >
@@ -30,8 +43,24 @@ export default function Crawled() {
                         {
                             crawl_data.map((data,index)=>{
                                 if(index<((menu_index+1)*6) && index>=(menu_index*6)){
-                                    return <div className='menu-item' onClick={()=>set_id(index+1)}>{data.title}<br/>
-                                    <a href={data.link}>바로가기</a><br/>{data.date}</div>
+                                    return (
+                                        <div>
+                                        <Card onClick={()=>set_id(index+1)} sx={{ Width: 275 ,minHeight:220,maxHeight:220}}>
+                                        <CardContent>
+                                          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                            {data.title}
+                                          </Typography>
+                                          <Typography sx={{ mb: 0.5 }} color="text.secondary">
+                                            {data.date}
+                                          </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Button size="small" href={data.link} >Learn More</Button>
+                                        </CardActions>
+                                        
+                                      </Card>
+                                      </div>
+                                    )
                                 }
                             })
                         }
