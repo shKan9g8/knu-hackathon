@@ -54,10 +54,10 @@ a {
     justify-content: center;
     column-gap: 40px;
     row-gap: 30px;
-    background-color: lightgoldenrodyellow;
+    background-color: white;
 }
 .containers > div{
-    background-color: white;
+    background-color: rgb(253, 253, 233);
     text-align: center;
     padding: 10px 10px;
     font-size: 35px;

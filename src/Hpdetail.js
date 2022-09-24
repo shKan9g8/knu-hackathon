@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 import "./Hpdetail.css";
 import Information from './component/Information';
 import data from './db/data.json'
-
 export default function Hpdetail() {
     document.body.style.padding=0;
     const {id}=useParams();
     return ( 
                 <div className='container'>
                     <div>
-                        {id>=1&id<=15?<img src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
+                        {id>=1&id<=15?<img className='img-box' src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
                     </div>
                     <div>
                         <Link to='/main'><button style={{"backgroundColor":"gray"}}>뒤로가기</button></Link>
@@ -20,7 +19,7 @@ export default function Hpdetail() {
                             if (hospital.id==id){
                                 return(
                                     <li key={index} style={{ whiteSpace: 'pre-wrap'}}>
-                                    {hospital.content}
+                                    <Information hp_id={id}/>
                                     {/*hospital.detail.map((cont)=>cont)*/}
                                     </li>
                                 );
@@ -28,9 +27,6 @@ export default function Hpdetail() {
                             }
                         )
                         }
-                    </div>
-                    <div className='index-container'>
-                        <Information hp_id={id}/>
                     </div>
 
                 </div>

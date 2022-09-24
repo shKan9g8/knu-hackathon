@@ -7,17 +7,17 @@
 
 .container {
     width: 99vw;
-    min-height: 140vh;
+    min-height: 100vh;
     margin: auto;
     place-content: center;
     display: grid;
-    grid-template-columns: 47% 47%;
-    grid-template-rows: 60% 39%;
+    grid-template-columns: 55% 35%;
+    grid-template-rows: 100%;
     align-content: center;
     justify-content: center;
     column-gap: 10px;
     row-gap: 10px;
-    background-color: black;
+    background-color: rgb(221, 250, 255);
     font-family : "BlackhanSans"
 }
 .container > div{
@@ -33,4 +33,8 @@
     justify-content: center;
     grid-column-start:1;
     grid-column-end:3;
+}
+.img-box {
+    position : relative;
+    top : 200px;
 }
