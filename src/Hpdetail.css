@@ -7,18 +7,19 @@
 
 .container {
     width: 99vw;
-    min-height: 140vh;
-    margin: auto;
+    height: 900px;
+    max-height: calc(80vh-500px);
+    margin: 0 0 0 0;
     place-content: center;
     display: grid;
     grid-template-columns: 47% 47%;
-    grid-template-rows: 60% 39%;
+    grid-template-rows: 50% 30%;
     align-content: center;
     justify-content: center;
     column-gap: 10px;
     row-gap: 10px;
-    background-color: black;
-    font-family : "BlackhanSans"
+    background-color: white;
+    font-family : "BlackhanSans";
 }
 .container > div{
     background-color: white;
@@ -26,11 +27,15 @@
     padding: 10px 10px;
     font-size: 40px;
     margin: 10px;
-    font-family : "BlackhanSans"
+    font-family : "BlackhanSans";
 }
 .index-container{   
     position: relative;
     justify-content: center;
     grid-column-start:1;
     grid-column-end:3;
+}
+
+.hospital-img{
+    overflow: hidden;
 }
