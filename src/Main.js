@@ -1,9 +1,14 @@
 import * as React from "react";
+import {Link} from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
 import Hospital from './Hospital';
+import { TableBody } from "@mui/material";
+import "./Main.css"
+import { motion } from "framer-motion";
+import { borderRadius } from "@mui/system";
 
 const images = [
   {
@@ -44,7 +49,8 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
       opacity: 0
     },
     "& .MuiTypography-root": {
-      border: "4px solid currentColor"
+      borderRadius: "20%",
+      border: "4px solid currentColor",
     }
   }
 }));
@@ -55,6 +61,7 @@ const ImageSrc = styled("span")({
   right: 0,
   top: 0,
   bottom: 0,
+  borderRadius:"15%",
   backgroundSize: "cover",
   backgroundPosition: "center 40%"
 });
@@ -92,23 +99,38 @@ const ImageMarked = styled("span")(({ theme }) => ({
   transition: theme.transitions.create("opacity")
 }));
 
+const clicked=(id)=>{
+  if(id==1){
+    window.location.assign('/')
+  }
+  else if(id==2){
+    window.location.assign('/')
+  }
+  else if(id==3){
+    window.location.assign('/')
+  }
+}
+
+
 export default function ButtonBases() {
+  document.body.style.backgroundColor="white"
   return (
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:2}} >
     <Box
       sx={{ display: "flex", flexWrap: "wrap", minWidth: 300, width: "100%" }}
     >
       {images.map((image) => (
-        <ImageButton
+        <ImageButton 
           focusRipple
           key={image.title}
           style={{
             width: 360
           }}
-          onClick = "location.href='Hospital.js'"
+          onClick = {()=>clicked(image.id)}
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
+          <Image >
             <Typography
               component="span"
               variant="subtitle1"
@@ -127,5 +149,6 @@ export default function ButtonBases() {
         </ImageButton>
       ))}
     </Box>
+    </motion.div>
   );
 }

@@ -1,6 +1,5 @@
 import React,{useRef, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import "./Hpdetail.css";
 import Information from './component/Information';
