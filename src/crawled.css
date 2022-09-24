@@ -10,26 +10,29 @@
     justify-content: center;
     column-gap: 10px;
     row-gap: 10px;
-    background-color: black;
+    background-color: white;
+    display : inline-flex;
 }
 .container1 > div{
     background-color: white;
     text-align: center;
     padding: 10px 10px;
     font-size: 40px;
-    margin: 10px;;
+    margin: 10px;
 }
-.menu-container{
+.menu-container {
     margin: 0;
     display: grid;
     column-gap: 10px;
     row-gap: 10px;
     grid-template-columns: 40% 40%;
+    left : 50%;
 }
-.img-item{
-    width: 500px;
-    height: 500px;
+.img-item {
+    width: 800px;
+    height: 700px;
     object-fit: fill;
+    padding-right : 100px;
 }
 
 .button-item{

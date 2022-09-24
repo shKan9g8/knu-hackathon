@@ -35,7 +35,7 @@ export default function Crawled() {
                                     <a href={data.link}>바로가기</a><br/>{data.date}</div>
                                     */
     return ( 
-        <div>
+        <div style={{"text-align" : "center"} }>
             <div class="label" style={{ "height": "20px", "width": "99vw", "background": "#a5090b" }}></div>
             <div class="blank" style={{ "height": "70px", "width": "99vw", "background": "white" }}>
                 <p align="left"><a href="http://localhost:3000/Main"><img src='img/Deagu.jpg' style={{ "height": "60px", "width": "260px", "float": "left", "paddingInlineStart": "50px", "paddingInlineEnd": "50px" }} ></img></a></p>
@@ -44,14 +44,14 @@ export default function Crawled() {
             </div>
                 <div className='container1'>
                     <div >
-                        {crawled_id!=0?<img className='img-item' src={`./img/${crawled_id}.png`} alt='Cannot_Found' ></img>:<></>}
+                    {crawled_id != 0 ? <img className='img-item' src={`./img/${crawled_id}.png`} alt='Cannot_Found' ></img>:<></>}
                     </div>
                     <div className='menu-container'>
                         {
                             crawl_data.map((data,index)=>{
                                 if(index<((menu_index+1)*6) && index>=(menu_index*6)){
                                     return (
-                                        <div>
+                                        <div style={{"border" : "1px solid black"} }>
                                         <Card onClick={()=>set_id(index+1)} sx={{ Width: 275 ,minHeight:220,maxHeight:220}}>
                                         <CardContent>
                                           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
