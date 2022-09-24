@@ -27,7 +27,7 @@ function Title({test}){
       return (
       <div className='title3'>
           <img src="img/993.gif" />
-          {database.hospitals[2].name}
+              <text style={{ "padding-top": "15px" }}>{database.hospitals[2].name}</text>
       </div>);
   }
   else if (test == '4')
@@ -35,7 +35,7 @@ function Title({test}){
       return (
           <div className='title4'>
               <img src="img/994.gif" />
-              {database.hospitals[3].name}
+              <text style={{ "padding-top": "10px" }}>{database.hospitals[3].name}</text>
           </div>);
   }
   else if (test == '5')
@@ -43,15 +43,21 @@ function Title({test}){
       return (
           <div className='title5'>
               <img src="img/995.gif" />
-              {database.hospitals[4].name}
+              <text style={{ "padding-top": "15px" }}>{database.hospitals[4].name}</text>
           </div>);
   }
   else if (test == '6') //size down
   {
       return (
-          <div className='title6'>
-              <img src="img/996.gif" />
-              {database.hospitals[5].name}
+          <div className='title6' style={{ "width": "700px" }}>
+              <img src="img/996.gif" /> 
+              <text className='smallsize'
+                  style={{
+                      "font-size": "18px",
+                      "padding-top": "20px"
+                  }}>
+                  {database.hospitals[5].name}
+              </text>
           </div>);  
           
   }
@@ -100,7 +106,7 @@ function Title({test}){
       return (
           <div className='title11'>
               <img src="img/9911.gif" />
-              {database.hospitals[10].name}
+              <text style={{ "padding-top": "15px" }}>{database.hospitals[10].name}</text>
           </div>);
   }
   else if (test == '12')
@@ -108,7 +114,7 @@ function Title({test}){
       return (
           <div className='title12'>
               <img src="img/9912.gif" />
-              <text style={{ "font-size": "30px", "padding-top": "20px" }}> {database.hospitals[11].name}</text>
+              <text style={{ "font-size": "30px", "padding-top": "30px" }}> {database.hospitals[11].name}</text>
           </div>);
   }
   else if (test == '13')
@@ -116,7 +122,7 @@ function Title({test}){
       return (
           <div className='title13'>
               <img src="img/9913.gif" />
-              <text style={{ "whiteSpace": "normal" }}> {database.hospitals[12].name}</text>
+              <text style={{ "padding-top": "15px" }}>{database.hospitals[12].name}</text>
           </div>);
   }
   else if (test == '14')
@@ -132,7 +138,7 @@ function Title({test}){
       return (
           <div className='title15'>
               <img src="img/9915.gif" />
-              <text style={{ "font-size": "40px", "padding-top": "10px" }}> {database.hospitals[14].name}</text>
+              <text style={{ "font-size": "38px", "padding-top": "15px" }}> {database.hospitals[14].name}</text>
           </div>);
   }
 };

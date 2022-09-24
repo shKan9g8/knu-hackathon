@@ -1,92 +1,115 @@
-﻿.title1{
-    display : flex;
+﻿
+@font-face {
+    font-family: "Maple";
+    font-weight: 50;
+    src: url("../fonts/Maplestory Light.ttf") format("truetype");
+}
+
+
+.title1 {
+    display: flex;
     position: absolute;
-    left : 270px;
-    padding-top : 15px;
+    left: 270px;
+    padding-top: 15px;
+    font-family: "Maple";
 }
 .title2 {
     display: flex;
     position: absolute;
     left: 180px;
     padding-top: 20px;
+    font-family: "Maple";
 }
 .title3 {
     display: flex;
     position: absolute;
     left: 270px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title4 {
     display: flex;
     position: absolute;
     left: 290px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title5 {
     display: flex;
     position: absolute;
-    left: 250px;
+    left: 270px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title6 {
     display: flex;
     position: absolute;
-    left: 175px;
-    padding-top: 0px;
+    left: 165px;
+    padding-top: 10px;
+    font-family: "Maple";
 }
 .title7 {
     display: flex;
     position: absolute;
     left: 180px;
-    padding-top : 20px;
+    padding-top: 20px;
+    font-family: "Maple";
 }
 .title8 {
     display: flex;
     position: absolute;
     left: 180px;
-    padding-top : 20px;
+    padding-top: 20px;
+    font-family: "Maple";
 }
 .title9 {
     display: flex;
     position: absolute;
     left: 175px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title10 {
     display: flex;
     position: absolute;
     left: 185px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title11 {
     display: flex;
     position: absolute;
     left: 200px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title12 {
     display: flex;
     position: absolute;
     left: 190px;
     padding-top: 0px;
+    font-family: "Maple";
 }
 .title13 {
     display: flex;
     position: absolute;
     left: 230px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .title14 {
     display: flex;
     position: absolute;
     left: 180px;
     padding-top: 10px;
+    font-family: "Maple";
 }
 .title15 {
     display: flex;
     position: absolute;
-    left: 180px;
+    left: 200px;
     padding-top: 15px;
+    font-family: "Maple";
 }
 .smallsize{
     font-size:25px;
