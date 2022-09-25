@@ -6,8 +6,6 @@ export default function Information({hp_id}) {
   var ind = data.hospitals[hp_id-1].detail2.contents;
   console.log()
   var length =Object.keys(ind).length;
-  
-
   const [pos,setPos]=useState(0)
   const click=(add)=>{
     if(pos+add>=0&&pos+add<length){

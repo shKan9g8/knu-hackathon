@@ -4,11 +4,14 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import "./Hpdetail.css";
 import Information from './component/Information';
+import LogoMenu from './component/LogoMenu.js';
 import data from './db/data.json'
 export default function Hpdetail() {
     document.body.style.padding=0;
     const {id}=useParams();
     return ( 
+        <>
+        <LogoMenu></LogoMenu>
                 <div className='container'>
                     <div>
                         {id>=1&id<=15?<img className='img-box' src={"img/h"+id+".png"} alt='Cannot_Found' ></img>:<>잘못된 출력</>}
@@ -30,5 +33,6 @@ export default function Hpdetail() {
                     </div>
 
                 </div>
+                </>
     );
 } 
