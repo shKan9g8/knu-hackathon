@@ -19,7 +19,7 @@
   height: 600px;
   margin:20px;
   top : 10px;
-  left : -450px;
+  left : 0px;
   text-align: center;
   background-color: lightgoldenrodyellow;
   font-size: 25px;
@@ -36,9 +36,5 @@
   .content {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-  }
-
-  .fixed-button{
-    position:absolute;
   }
   

@@ -7,7 +7,7 @@
 
 .container {
     width: 99vw;
-    min-height: 100vh;
+    min-height: 90vh;
     margin: auto;
     place-content: center;
     display: grid;
