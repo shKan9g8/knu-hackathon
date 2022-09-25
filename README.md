@@ -38,5 +38,10 @@
 임시  
 
 ---
+## 홈페이지 주소
+서버 링크 : https://main.d2su2giwadbn7n.amplifyapp.com/
+
+--
 >**Note**
 > 구글 MAP API 키가 있어야 정상적으로 위치를 표현할 수 있습니다
+> AWS를 키고 있어야 서버에 접속 할 수 있습니다.
