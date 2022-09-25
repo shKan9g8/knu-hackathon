@@ -33,14 +33,13 @@ export default function Hpdetail() {
                     </div>
                     <div style={{"display":"grid","gridTemplateRows":"60% 40%"}}>
                     <div style={{"overflow":"hidden"}}>
-                        <Link to='/main'><button style={{"backgroundColor":"gray"}}>뒤로가기</button></Link>
                         { data.hospitals.map((hospital,index)=>{
                             if (hospital.id==id){
                                 return(
-                                    <li key={index} style={{ whiteSpace: 'pre-wrap'}}>
+                                    <ui key={index} style={{ whiteSpace: 'pre-wrap'}}>
                                     <Information hp_id={id}/>
                                     {/*hospital.detail.map((cont)=>cont)*/}
-                                    </li>
+                                    </ui>
                                 );
                                 }
                             }

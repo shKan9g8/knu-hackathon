@@ -1,6 +1,7 @@
 .Logo-title {
     font-family: Maple;
     height: 59px;
+    width: auto;
     float : left; 
     font-size: 45px;
     padding-inline: 50px;
@@ -8,6 +9,7 @@
 }
 
 .hyperlink-logo{
+    width: auto;
     transform: translateY(10%);
     font-family: Maple;
     font-size:xx-large;

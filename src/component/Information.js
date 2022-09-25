@@ -24,7 +24,8 @@ export default function Information({hp_id}) {
               data.hospitals[hp_id-1].detail2.contents.map((cont,index)=>{
                 return <div key={index} className='flex-item'>
                   <li id={index} key={index}>{cont.title}</li>
-                  <Box>{cont.content}</Box>
+                  <box>{cont.content}</box>
+                  <span>{cont.date},{cont.target}</span>
                 </div>
               })  
             }
