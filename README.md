@@ -35,7 +35,7 @@
 > 임시
 ---
 ## 시연영상
-임시  
+https://www.youtube.com/watch?v=3kzYls4aGZo&ab_channel=%EA%B0%95%EC%84%B1%ED%98%84
 
 ---
 ## 홈페이지 주소
