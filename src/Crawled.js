@@ -1,6 +1,7 @@
 import { LinearProgress, Paper } from '@mui/material';
 import React,{useRef, useState} from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import "./crawled.css"
 import crawl_data from './db/crawling.json';
 import Box from '@mui/material/Box';
@@ -38,6 +39,7 @@ export default function Crawled() {
     return ( 
         <div>
         <LogoMenu></LogoMenu>
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
                 <div className='container1'>
                     <div >
                     {crawled_id != 0 ? <img className='img-item' src={`./img/${crawled_id}.png`} alt='Cannot_Found' ></img>:<></>}
@@ -74,6 +76,7 @@ export default function Crawled() {
             </div>
             <div class="blank" style={{ "height": "60px", "width": "99vw", "background": "white" }}></div>
             <div class="label" style={{ "height": "20px", "width": "99vw", "background": "#a5090b" }}></div>
+            </motion.div>
         </div>
     );
 } 

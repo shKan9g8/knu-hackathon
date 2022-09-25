@@ -6,3 +6,17 @@
     padding-inline: 50px;
     box-shadow: 5px 0px 0px 0px #a5090b;
 }
+
+.hyperlink-logo{
+    transform: translateY(10%);
+    font-family: Maple;
+    font-size:xx-large;
+    opacity: 0.5;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+}
+
+.hyperlink-logo:hover{
+    opacity: 1;
+    transform: translateY(-1%);
+}
