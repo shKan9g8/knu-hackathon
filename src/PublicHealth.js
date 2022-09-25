@@ -1,6 +1,7 @@
 import React from 'react'
 import './PublicHealth.css'
 import PHDB from './db/PublicHealth.json'
+import { motion } from "framer-motion";
 import LogoMenu from './component/LogoMenu';
 export default function PublichHealth() {
     document.body.style.padding = 0;
@@ -14,7 +15,7 @@ export default function PublichHealth() {
     return (
         <div className = "PHBifContainer">
             <LogoMenu></LogoMenu>
-
+            <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
             <div className="PHcontainer">
                 <div className = 'pic-container' >
                     <text style={{ "font-size": "80px", "font-family": 'wemade' }}>{PHDB["WhatIs"]}</text>
@@ -39,7 +40,7 @@ export default function PublichHealth() {
                 </div>
             <div className="blank" style={{ "height": "70px", "width": "99vw", "background": "white" }}></div>
             <div className="label" style={{ "height": "20px", "width": "99vw", "background": "#a5090b" }}></div>
-
+            </motion.div>
         </div>
         );
 }
