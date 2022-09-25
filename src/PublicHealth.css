@@ -29,65 +29,33 @@ buttons {
     display: inline-block;
 
 }
-  .w-btns {
-    position: relative;
-    border: none;
-    display: none;
-    padding: 15px 30px;
-    border-radius: 15px;
-    font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-  }
-  .w-btn-outlines {
-    position: relative;
-    padding: 15px 30px;
-    border-radius: 15px;
-    font-family: "paybooc-Light", sans-serif;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-  }
-  .w-btn-yellow-outline {
-    border: 3px solid #fce205;
-    color: #6e6e6e;
-}
 
-.PHcontainer{
-    width : 100vw;
-    height : 100vh;
-    display : grid;
-    grid-template-columns: 44% 50%;
-    grid-template-rows : 10% 40%;
+.animated-txt1{
+    margin:50px;
+    font-family: Maple;
+    font-size: 60px;
+    position: absolute;
+    top: 20%;
+    opacity: 0;
+    animation: UpShow 7s forwards;
 }
-.PHcontainer > div{
-    text-align: center;
-    padding: 10px 10px;
-    font-size: 35px;
-    margin: 10px;
-    column-gap: 40px;
-    row-gap: 30px;
+.animated-txt2{
+    margin:200px;
+    font-family: Maple;
+    font-size: 60px;
+    position: absolute;
+    left:-10%;
+    opacity: 0;
+    animation: LeftShow 7s forwards;
 }
-.pic-container{  
-    grid-row-start:1;
-    grid-row-end:5;
-    background-color: white;
-}
-.txt-container{
-    grid-row-start:1;
-    grid-row-end:5;
-    position : relative;
-    left : 100px;
-    top : -20px;
-    display: inline-block;
-    width: 600px;
-    height : 770px;
-    white-space: normal;
-    background-color: rgb(224, 250, 224);
-    border-radius: 80px / 40px;
+.animated-txt3{
+    margin:200px;
+    font-family: Maple;
+    font-size: 60px;
+    position: absolute;
+    left:-10%;
+    opacity: 0;
+    animation: LastShow 7s forwards;
 }
 img {
     max-width: 100%;
@@ -99,4 +67,53 @@ img {
    }
 .txt1 {
     padding : 10px,
+}
+
+@keyframes LeftShow {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    25%{
+        opacity: 1;
+        transform : translateX(10%)
+      }
+    75%{
+      opacity: 1;
+      transform : translateX(10%)
+    }
+    100%{
+      opacity: 0;
+      transform : translateX(-10%)
+    }
+  }
+
+@keyframes UpShow {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    25%{
+        opacity: 1;
+        transform : translateY(-10%)
+      }
+    75%{
+      opacity: 1;
+      transform : translateY(-10%)
+    }
+    100%{
+      opacity: 0;
+      transform : translateY(10%)
+    }
+  }
+
+@keyframes LastShow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+      }
+      100%{
+        opacity: 1;
+        transform : translateX(10%)
+      }
 }

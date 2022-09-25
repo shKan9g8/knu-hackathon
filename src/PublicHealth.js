@@ -8,7 +8,7 @@ export default function PublichHealth() {
     document.body.style.backgroundColor = "white";
     const clicked=(id)=>{
         if(id==1){
-          window.location.assign('/Main')
+          window.location.assign('/hospital')
         }
         }
 
@@ -16,30 +16,40 @@ export default function PublichHealth() {
         <div className = "PHBifContainer">
             <LogoMenu></LogoMenu>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{delay:1}} >
-            <div className="PHcontainer">
-                <div className = 'pic-container' >
-                    <text style={{ "font-size": "80px", "font-family": 'wemade' }}>{PHDB["WhatIs"]}</text>
-                    <div class = "cat">
-                    <img src={"img/PublicHealth.jpg"} />
-                    <buttons className="w-btn-outline w-btn-yellow-outline" type="button" onClick = {()=>clicked(1)}>
-                        Back
-                    </buttons>
-                    </div>
-                </div>
-                <div className='txt-container'>
-                <p style={{ "font-size": "28px", "padding": "20px", "font-family": 'wemade'}}>{PHDB["summary"]}</p>
-                    <p style={{ "font-size": "24px", "padding": "10px", "font-family": 'nanum'}}>{PHDB["content1"]}</p>
-                    <p style={{ "font-size": "24px", "padding": "10px", "font-family": 'nanum'}}>{PHDB["content2"]}</p>
-                    <p style={{ "font-size": "26px", "padding": "10px", "font-family": 'nanum'}}>{PHDB["WhatIs2"]}</p>
-                    <p style={{ "font-size": "24px", "padding": "10px"}}>{PHDB["content3"]}</p>
-                    <p style={{ "font-size": "24px", "padding": "10px"}}>{PHDB["content4"]}</p>
-                    <a href = "https://www.ppm.or.kr/"><p style={{ "font-size": "25px", "padding": "10px"}}>https://www.ppm.or.kr/</p></a>
-
-
-                </div>
-                </div>
-            <div className="blank" style={{ "height": "70px", "width": "99vw", "background": "white" }}></div>
-            <div className="label" style={{ "height": "20px", "width": "99vw", "background": "#a5090b" }}></div>
+            <div className='animated-txt1' style={{"animationDelay": "1s"}}>
+                <img src='img/1001.png' alt='Cannot_Found' style= {{"float":"left","borderRadius":"10%"}}/>
+                <br/>
+                공공의료란?<br/>{PHDB["summary"]}
+            </div>
+            <div className='animated-txt2' style={{"animationDelay": "8s"}}>
+            <img src='img/1002.png' alt='Cannot_Found' style= {{"float":"right","borderRadius":"10%"}}/>
+                <br/>
+            {PHDB["content1"]}
+            </div>
+            <div className='animated-txt2' style={{"animationDelay": "16s"}}>
+            <img src='img/1003.png' alt='Cannot_Found' style= {{"float":"left","borderRadius":"10%"}}/>
+                <br/>
+            {PHDB["content2"]}
+            </div>
+            <div className='animated-txt1' style={{"animationDelay": "25s"}}>
+            <img src='img/1004.png' alt='Cannot_Found' style= {{"float":"right","borderRadius":"10%","minWidth":"600px","minHeight":"600px"}}/>
+                <br/>
+            {PHDB["WhatIs2"]}
+            </div>
+            <div className='animated-txt2' style={{"animationDelay": "32s"}}>
+            <img src='img/1005.png' alt='Cannot_Found' style= {{"float":"left","maxWidth":"600px","borderRadius":"10%"}}/>
+                <br/>
+            {PHDB["content3"]}
+            </div>
+            <div className='animated-txt3' style={{"animationDelay": "40s"}}>
+            <img src='img/1006.png' alt='Cannot_Found' style= {{"borderRadius":"10%","minWidth":"400px","float":"left"}}/>
+                <br/>
+            {PHDB["content4"]}
+            <br/>
+            <buttons className="w-btn-outline w-btn-yellow-outline" type="button" onClick = {()=>clicked(1)}>
+                        바로가기
+            </buttons>
+            </div>
             </motion.div>
         </div>
         );
